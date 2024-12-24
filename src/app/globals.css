@@ -2,20 +2,67 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ff00ff, 0 0 30px #ff00ff, 0 0 40px #ff00ff, 0 0 50px #ff00ff, 0 0 75px #ff00ff;
+  }
+  50% {
+    text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ff00ff, 0 0 40px #ff00ff, 0 0 50px #ff00ff, 0 0 75px #ff00ff;
+  }
+  100% {
+    text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ff00ff, 0 0 30px #ff00ff, 0 0 40px #ff00ff, 0 0 50px #ff00ff, 0 0 75px #ff00ff;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+@keyframes colorChange {
+  0% {
+    color: #ff0000;
+  }
+  25% {
+    color: #ff9900;
+  }
+  50% {
+    color: #33cc33;
+  }
+  75% {
+    color: #3399ff;
+  }
+  100% {
+    color: #ff0000;
+  }
+}
+
+.animate-glow {
+  animation: glow 1.5s ease-in-out infinite;
+}
+
+.animate-colorChange {
+  animation: colorChange 4s ease-in-out infinite;
+}
+
+
+
+/* Adicionando responsividade no arquivo CSS */
+@media (max-width: 1920px) {
+  .banner-text {
+    font-size: 6rem;
+  }
+}
+
+@media (max-width: 1025px) {
+  .banner-text {
+    font-size: 4.5rem;
+  }
+}
+
+@media (max-width: 769px) {
+  .banner-text {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .banner-text {
+    font-size: 2.5rem;
+  }
 }
