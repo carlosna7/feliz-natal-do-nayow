@@ -31,7 +31,7 @@ export default function Home() {
           FELIZ NATAL!!!
         </h1>
         <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 text-2xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white text-center animate-glow animate-colorChange">
-          O Carlos, nAyow, Carlão, Carlinhos, Carlinfonos ou Carlota te desenha um feliz natal!!!
+          O Carlos, nAyow, Carlão, Carlinhos, Carlinfonos ou Carlota te deseja um feliz natal!!!
         </h1>
       </div>
     </main>
